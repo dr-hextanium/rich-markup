@@ -4,14 +4,42 @@
     font-family: 'K2D', sans-serif;
 }
 
-.rich-codeblock {
-    font-family: Consolas, "courier new";
-    color: #f1f1f1;
-    height: 50%;
-    padding: 5px;
+body {
+    margin: 3em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+}
+
+pre {
+    display: block;
+    border-radius: 10px;
+}
+
+.rich-seperator {
+    width: 35%;
+    min-width: 35%;
+    border-radius: 50px;
+    border: solid 1.5px #212121;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.rich-quote {
+    border-left: solid 3px #212121;
+    min-width: 25%;
+    width: 25%;
+    background-color: rgba(195, 195, 195, 0.3);
+    border-radius: 3px;
+    padding: 7px;
+}
+
+.rich-codeblock code {
+    font-family: monospace !important;
+    padding: 25px;
     border-radius: 10px;
     font-size: 105%;
-    display: inline-block;
-    background-color: #212121;
-    /* white-space: nowrap */
+    min-width: 30%;
+    width: 30%;
 }

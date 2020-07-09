@@ -1,6 +1,6 @@
 /**
  * Just taking a moment to explain the skeleton of the grammar.
- * Inline"tags" are denoted by one $ ($, a dollar sign).
+ * Inline "tags" are denoted by one $ ($, a dollar sign).
  * Block tags are denoted by two $, ($$, 2 dollar signs).
  * The purpose of | is to determine where to insert content.
  * For now, Rich can only parse into HTML, but in the future you'll be able to use Rich seamlessly with Markdown!
@@ -15,19 +15,23 @@ var grammar = {
         '$5': '<h5>|</h5>',
         '$6': '<h6>|</h6>',
         '$quote': '<p class="rich-quote">|</p>',
-        '$p': '<p>|</p>'
+        '$p': '<p>|</p>',
+        '$$$': '<div class="rich-seperator">|</div>',
+        '$n': '<br>'
     },
     block: {
-        '$$blockquote': '<div class="rich-blockquote">',
+        '$$blockquote': '<div class="rich-quote">',
         'blockquote$$': '</div>',
-        '$$code': '<pre class="rich-codeblock"><code data-lang="|">',
+        '$$code': '<pre class="rich-codeblock"><code class="lang-|">',
         'code$$': '</code></pre>',
     },
     metadata: {
         '$$title': '{title: "|"}'
     },
     style: {
-
+        '/\*\*\w+\*\*/g': '<strong>|</strong>',
+        '/\*\w+\*/g': '<em>|</em>',
+        '/\*\*\*\w+\*\*\*/g': '<strong><em>|</em></strong>',
     }
 }
 

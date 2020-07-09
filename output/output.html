@@ -1,16 +1,16 @@
-<!DOCTYPE html><html>    <head>        <meta charset="utf-8">        <meta http-equiv="X-UA-Compatible" content="IE=edge">        <title>Rich title ╰（‵□′）╯</title>        <meta name="description" content="">        <meta name="viewport" content="width=device-width, initial-scale=1">        <!-- Import rich.css -->        <link rel="stylesheet" href="../src/lib/css/rich.css">    </head>    <body>
-<h1>Hello world!</h1>
-<h2>This is a h2 header!</h2>
-<h3>This is a h3 header!</h3>
-<h4>This is a h4 header!</h4>
-<h5>This is a h5 header!</h5>
-<h6>This is a h6 header!</h6>
-<p class="rich-quote">This is a nice quote...</p>
-<div class="rich-blockquote">
-<p>This is a block quote</p>
-<p>that spans many lines!</p>
+<!DOCTYPE html><html>    <head>        <meta charset="utf-8">        <meta http-equiv="X-UA-Compatible" content="IE=edge">        <title>Rich title ╰（‵□′）╯</title>        <meta name="description" content="">        <meta name="viewport" content="width=device-width, initial-scale=1">        <!-- Import rich.css -->        <link rel="stylesheet" href="../src/lib/css/rich.css">        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.1/build/styles/atom-one-dark.min.css">    </head>    <body>
+<h1>This is a very nice H1 header!</h1>
+<div class="rich-seperator"></div>
+<h2>Quotes:</h2>
+<p class="rich-quote">Everyone needs seperators!</p>
+<div class="rich-quote">
+<p>And cool blockquotes! Which can span many lines!</p>
+<p>Let's put some text here to make sure that this wraps to the next line!</p>
 </div>
-<pre class="rich-codeblock"><code data-lang="js">
-<p>// You can have cool codeblocks!</p>
+<div class="rich-seperator"></div>
+<h2>Codeblocks:</h2>
+<pre class="rich-codeblock"><code class="lang-js">
+<p>// You can have cool codeblocks! (Powered by highlight.js)</p>
 <p>var variableName = 'cool string';</p>
-</code></pre><script src="../src/lib/js/rich.js"></script></body></html>
+<p>console.log(document.getElementById('unreadableDate').innerHTML = new Date())</p>
+</code></pre><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js"></script><script src="../src/lib/js/rich.js"></script><script>hljs.initHighlightingOnLoad();</script></body></html>
