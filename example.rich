@@ -1,0 +1,20 @@
+$$title Rich title ╰（‵□′）╯
+
+$1 Hello world!
+$2 This is a h2 header!
+$3 This is a h3 header!
+$4 This is a h4 header!
+$5 This is a h5 header!
+$6 This is a h6 header!
+
+$quote This is a nice quote...
+
+$$blockquote
+This is a block quote
+that spans many lines!
+blockquote$$
+
+$$code js
+// You can have cool codeblocks!
+var variableName = 'cool string';
+code$$

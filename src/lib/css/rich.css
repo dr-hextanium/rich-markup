@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap');
+
+* {
+    font-family: 'K2D', sans-serif;
+}
+
+.rich-codeblock {
+    font-family: Consolas, "courier new";
+    color: #f1f1f1;
+    height: 50%;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 105%;
+    display: inline-block;
+    background-color: #212121;
+    /* white-space: nowrap */
+}
