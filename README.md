@@ -102,6 +102,12 @@ If you're importing a custom syntax, specify its file name with the `--syntax` f
 
 **Note: Make sure that the syntax file is in your `src/lib/syntaxes` directory.**
 
+**Note #2: This is an feature is untested with *custom* syntaxes, but it appears to work. Bugs may occur.**
+
+### Contributing
+
+If you'd like to contribute, hit me up on Discord (Hextanium#5890), and we can discuss from there.
+
 ### Credits:
 [Highlight.js](https://highlightjs.org) (an amazing library by the way) is used to style the code blocks.
 
