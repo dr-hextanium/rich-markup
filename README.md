@@ -18,14 +18,20 @@ var grammar = {
         '$6': '<h6>|</h6>',
         '$quote': '<p class="rich-quote">|</p>',
         '$p': '<p>|</p>',
-        '$$$': '<div class="rich-seperator">|</div>',
-        '$n': '<br>'
+        '$$$': '<div class="rich-separator">|</div>',
+        '$n': '<br>',
+        '$item': '<li>|</li>',
+        '$image': '<img src="|">'
     },
     block: {
         '$$blockquote': '<div class="rich-quote">',
         'blockquote$$': '</div>',
         '$$code': '<pre class="rich-codeblock"><code class="lang-|">',
         'code$$': '</code></pre>',
+        '$$ordered': '<ol class="rich-ordered-list">',
+        'ordered$$': '</ol>',
+        '$$link': '<a href="|">',
+        'link$$': '</a>',
     },
     metadata: {
         '$$title': '{title: "|"}'
