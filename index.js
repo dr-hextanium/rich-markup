@@ -9,7 +9,7 @@ const prettify = require('html-prettify');
 const fs = require('fs');
 const _ = require('lodash');
 const genTemplate = require('./src/lib/generate-template')
-var template = require('./src/lib/template');
+var template = require('./src/lib/templates/template');
 
 // Fancy logging
 const chalk = require('chalk');
@@ -50,7 +50,7 @@ log(
 log();
 
 // Make sure we get both args
-if(!args._[0] || !args._[1]) {
+if (!args._[0] || !args._[1]) {
     throw 'Please provide 2 arguments, an input file and an output file!';
 }
 
@@ -58,19 +58,26 @@ if(!args._[0] || !args._[1]) {
 log(chalk.bold.hex(accent)(`Version: ` + chalk.white(program.version())));
 
 // Get the output
-var output = parser.tokenize(args._[0]);
+
+var output = parser.parse(args._[0], args.syntax);
 
 // Create a file
 fs.open('./output/' + args._[1], 'w', function (err, file) {
     // Simple error checking
     if (err) log(chalk.bold('Error with Rich!\n') + pe.render(err));
 
-    // Create the content of the HTML file
+    // Generate our title metadata.
     var title = output[0];
     title = title.split('"')[1]
+
+    // Create the metadata template.
     template.dynamicStart = genTemplate(template.start)
     output = output.slice(1)
-    var htmlContent = `${template.dynamicStart({title: title})}\n${output.join('\n')}${template.end}`;
+
+    const metadata = {title: title}
+
+    // Create the content of the HTML file
+    var htmlContent = `${template.dynamicStart(metadata)}\n${output.join('\n')}${template.end}`;
 
     fs.appendFile('./output/' + args._[1], htmlContent, function (err) {
         if (err) throw err;

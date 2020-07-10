@@ -2,7 +2,6 @@ require('pretty-error').start();
 
 const fs = require('fs');
 const chalk = require('chalk');
-const syntax = require('./lib/syntax')
 const accent = '#aa00ff';
 var PrettyError = require('pretty-error');
 var pe = new PrettyError();
@@ -10,7 +9,10 @@ var info = chalk.bold(`${chalk.hex(accent)('[')}${chalk.white('Info')}${chalk.he
 var log = console.log;
 
 class Parser {
-    tokenize(fileName) {
+    parse(fileName, customSyntax) {
+        if(!customSyntax) customSyntax = 'syntax';
+        const syntax = require(`./lib/syntaxes/${customSyntax}`)
+
         var data = fs.readFileSync(fileName, 'utf-8')
 
         // Get the lines of the file with a simple split statement
