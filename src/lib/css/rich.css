@@ -8,8 +8,19 @@ body {
     margin: 3em;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     margin-top: 0px;
+}
+
+img {
+    width: 30%;
+    border-radius: 10px;
+    border: solid 3px #212121ee; 
 }
 
 pre {
@@ -17,7 +28,16 @@ pre {
     border-radius: 10px;
 }
 
-.rich-seperator {
+a {
+    text-decoration: none;
+    transition: all 0.25s;
+}
+
+a:hover {
+    font-size: 110%;
+}
+
+.rich-separator {
     width: 35%;
     min-width: 35%;
     border-radius: 50px;

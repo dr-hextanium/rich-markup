@@ -1,10 +1,11 @@
-$$title Rich title ╰（‵□′）╯
+$$title Rich Title ╰（‵□′）╯!
 
-$1 This is a very nice H1 header!
+$1 Rich!
+$3 This is a page made in Rich, featuring all of Rich's (built-in) features!
 $$$
 
 $2 Quotes:
-$quote Everyone needs seperators!
+$quote Everyone needs separators!
 
 $$blockquote
 And cool blockquotes! Which can span many lines!
@@ -12,10 +13,29 @@ Let's put some text here to make sure that this wraps to the next line!
 blockquote$$
 
 $$$
-$2 Codeblocks:
+$2 Code blocks:
 
 $$code js
-// You can have cool codeblocks! (Powered by highlight.js)
+// You can have cool code blocks! (Powered by highlight.js)
 var variableName = 'cool string';
 console.log(document.getElementById('unreadableDate').innerHTML = new Date())
 code$$
+
+$$$
+$2 Lists:
+
+$$ordered
+
+$item Very nice item!
+$item This is the second item of the list.
+
+ordered$$
+
+$$$
+$2 Links & Images:
+
+$$link https://github.com/TechnoDrive/rich-markup
+Rich's GitHub repository! 
+link$$
+
+$image https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg

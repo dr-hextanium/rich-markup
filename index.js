@@ -43,7 +43,7 @@ clear();
 
 log(
     chalk.hex(accent)(
-        figlet.textSync('$ Rich Markup $')
+        figlet.textSync('$ Rich $')
     )
 );
 
@@ -70,10 +70,10 @@ fs.open('./output/' + args._[1], 'w', function (err, file) {
     title = title.split('"')[1]
     template.dynamicStart = genTemplate(template.start)
     output = output.slice(1)
-    var htmlContent = `${template.dynamicStart({titledata: title})}\n${output.join('\n')}${template.end}`;
+    var htmlContent = `${template.dynamicStart({title: title})}\n${output.join('\n')}${template.end}`;
 
     fs.appendFile('./output/' + args._[1], htmlContent, function (err) {
         if (err) throw err;
-        log(info + 'Compiled Successfully!');
+        log(info + 'Compiled successfully to ' + chalk.bold(args._[1]));
     });
 });
