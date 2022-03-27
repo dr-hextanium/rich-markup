@@ -20,7 +20,7 @@
     "inquirer": "^7.3.0",
     "jison": "^0.4.18",
     "lodash": "^4.17.19",
-    "minimist": "^1.2.5",
+    "minimist": "^1.2.6",
     "pretty-error": "^2.1.1"
   }
 }
